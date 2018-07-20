@@ -1,0 +1,124 @@
+*{padding:0px;margin: 0px;}
+.collapsible {
+    background-color: #ccc;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    float: right;
+    margin-left: 5px;
+    margin-top: -20px;
+    font-size: 30px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.img-list a {
+    text-decoration: none;
+}
+
+.li-sub p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: table;
+    cursor: pointer;
+}
+.inner {
+    display: table-row;
+    overflow: hidden;
+}
+.li-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    padding-right: 1em;
+}
+.li-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.trash {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+    background-image: url('https://image.flaticon.com/icons/svg/149/149864.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.trash:hover{
+    background-image: url('https://image.flaticon.com/icons/svg/9/9304.svg');
+    background-repeat: no-repeat;
+}
+.li-text {
+    display: table-cell;
+    vertical-align: middle;
+    width: 80%;
+}
+.li-head {
+    margin: 10px 0 0 0;
+}
+.li-sub {
+    margin: 0;
+}
+
+.red_point{
+    float: left;
+    background: #e74c3c;
+    width: 2em;
+    border-radius: 50%;
+    font-size: 0.7em;
+    line-height: 2;
+    text-align: center;
+    position: fixed;
+    margin-left: 15px;
+}
+
+.unread{
+    border-left: 0.3em solid #1abc9c;
+}
+
+.truncate {
+    width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media all and (max-width: 640px) {
+    .truncate {
+        width: 200px;
+    }
+}
+

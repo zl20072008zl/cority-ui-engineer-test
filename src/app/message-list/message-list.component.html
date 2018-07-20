@@ -1,0 +1,22 @@
+
+<button class="collapsible" [ngClass]="((isActive?'active':''))" (click)="showList(this)"><span style="font-size: 20px;">List Name</span><span class="red_point">{{unreadCount}}</span><br/>
+  <span>Total  {{messageList.length}}</span>
+</button>
+<div  class="content" #content> 
+  <ul class="list img-list" *ngFor="let messages of messageList" [ngClass]="((messages.status?'':'unread'))" [hidden]="messages.status == messageStatus.Deleted" >
+    <li >
+      <div class="li-img" (click)="readMessage($event,messages.id)">
+        <img src="https://raw.githubusercontent.com/mnadimi/cority-ui-engineer-test/master/src/assets/cority-logo.svg?sanitize=true" />
+      </div>
+      <div class="li-text" (click)="readMessage($event,messages.id)">
+        <h3 class="li-head">{{messages.id}}</h3>
+        <div class="li-sub">
+          <p>{{messages.name}}</p>
+          <p class="truncate">{{messages.description}}</p>
+          <p>{{messages.dates | date : 'EEE MMM yyyy'}}</p>
+        </div>
+      </div>
+      <div class="li-img trash" (click)="removeMessage(messages.id)"></div>
+    </li>
+  </ul>
+</div>

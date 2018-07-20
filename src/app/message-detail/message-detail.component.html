@@ -1,0 +1,14 @@
+<div  class="content" #content> 
+      <div class="li-img">
+        <img src="https://raw.githubusercontent.com/mnadimi/cority-ui-engineer-test/master/src/assets/cority-logo.svg?sanitize=true" />
+      </div>
+      <div class="li-text">
+        <h3 class="li-head">{{message.id}}</h3>
+        <div class="li-sub">
+          <p>{{message.name}}</p>
+          <p>{{message.description}}</p>
+          <p>{{message.dates | date : 'EEE MMM yyyy'}}</p>
+        </div>
+      </div>
+      <button [routerLink]="['/']">Back</button>
+</div>
